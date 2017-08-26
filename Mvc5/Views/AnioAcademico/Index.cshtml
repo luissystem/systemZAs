@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Domain.AnioAcademico>
+
+<center>
+    <br />
+    <br />
+    <FONT FACE="impact" SIZE=2 COLOR="White">
+        <h1>REGISTRO DE ANIO ACADEMICO</h1>
+
+    </FONT>
+
+    <br />
+</center>
+
+@using (Html.BeginForm("Index", "AnioAcademico", FormMethod.Get))
+{
+    <div class="form-inline">
+
+        @Html.Label("Criterio :")
+        @Html.TextBox("criterio", "", new { @class = "form-control" })
+        <button type="submit" class="btn btn-danger">Buscar</button>
+        @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn btn-success" })
+    </div>
+    <br />
+}
+
+
+<
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaApertura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaClausura)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaApertura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaClausura)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.AnioAcademicoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AnioAcademicoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AnioAcademicoId })*@
+
+            <a href="@Url.Action("Edit", new { id = item.AnioAcademicoId })" title="Edit"
+               style="margin-right: 3px;"
+               class="btn btn-warning btn-sm">
+                <i class="glyphicon glyphicon-pencil"></i>
+                <span class="sr-only">Edit</span>
+            </a>
+            <a href="@Url.Action("Details", new { id = item.AnioAcademicoId })" title="Details"
+               style="margin-right: 3px;"
+               class="btn btn-primary btn-sm">
+                <i class="glyphicon glyphicon-list-alt"></i>
+                <span class="sr-only">Details</span>
+            </a>
+            <a href="@Url.Action("Delete", new { id = item.AnioAcademicoId })" title="Delete"
+               style="margin-right: 3px;"
+               class="btn btn-danger btn-sm">
+                <i class="glyphicon glyphicon-trash"></i>
+                <span class="sr-only">Delete</span>
+            </a>
+        </td>
+    </tr>
+}
+
+</table>

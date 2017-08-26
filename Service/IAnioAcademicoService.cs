@@ -11,7 +11,7 @@ namespace Service
     {
         IEnumerable<AnioAcademico> GetAnioAcademicos(String criterio);
 
-        AnioAcademico GetAnioAcademico(Int32 id);
+        AnioAcademico GetAnioAcademico(Int32? id);
 
         void AddAnioAcademico(AnioAcademico anioAcademico);
 

@@ -1,0 +1,58 @@
+﻿@model Domain.AnioAcademico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AnioAcademico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaApertura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaApertura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaClausura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaClausura)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AnioAcademicoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

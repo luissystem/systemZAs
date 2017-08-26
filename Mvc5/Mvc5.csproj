@@ -213,6 +213,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlumnoController.cs" />
+    <Compile Include="Controllers\AnioAcademicoController.cs" />
     <Compile Include="Controllers\ApoderadoController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\DocenteController.cs" />
@@ -362,6 +363,11 @@
     <Content Include="Views\Grados\Edit.cshtml" />
     <Content Include="Views\Grados\Delete.cshtml" />
     <Content Include="Views\Curso\Index.cshtml" />
+    <Content Include="Views\AnioAcademico\Index.cshtml" />
+    <Content Include="Views\AnioAcademico\Details.cshtml" />
+    <Content Include="Views\AnioAcademico\Create.cshtml" />
+    <Content Include="Views\AnioAcademico\Edit.cshtml" />
+    <Content Include="Views\AnioAcademico\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

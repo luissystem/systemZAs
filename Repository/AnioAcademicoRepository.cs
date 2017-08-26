@@ -29,7 +29,7 @@ namespace Repository
 
         }
 
-        public AnioAcademico GetAnioAcademico(int id)
+        public AnioAcademico GetAnioAcademico(int? id)
         {
             return Context.anioAcademicos.Find(id);
         }

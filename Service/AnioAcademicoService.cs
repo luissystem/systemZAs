@@ -7,7 +7,7 @@ using Domain;
 using Repository;
 namespace Service
 {
-    class AnioAcademicoService : IAnioAcademicoService
+  public  class AnioAcademicoService : IAnioAcademicoService
     {
         private IAñoAcademicoRepository _anioRepository;
         public AnioAcademicoService()
@@ -28,7 +28,7 @@ namespace Service
             _anioRepository.DeleteAnioAcademico(anioAcademico);
         }
 
-        public AnioAcademico GetAnioAcademico(int id)
+        public AnioAcademico GetAnioAcademico(int? id)
         {
             return _anioRepository.GetAnioAcademico(id);
         }
