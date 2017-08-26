@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoRepository.cs" />
+    <Compile Include="AnioAcademicoRepository.cs" />
     <Compile Include="ApoderadoRepository.cs" />
     <Compile Include="BimestreRepository.cs" />
     <Compile Include="CursoRepository.cs" />
@@ -122,6 +123,10 @@
     <Compile Include="Migrations\201708241738185_alumnoedit.Designer.cs">
       <DependentUpon>201708241738185_alumnoedit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708262012147_aniodescripcion.cs" />
+    <Compile Include="Migrations\201708262012147_aniodescripcion.Designer.cs">
+      <DependentUpon>201708262012147_aniodescripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelRepository.cs" />
     <Compile Include="PaisRepository.cs" />
@@ -165,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708241738185_alumnoedit.resx">
       <DependentUpon>201708241738185_alumnoedit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708262012147_aniodescripcion.resx">
+      <DependentUpon>201708262012147_aniodescripcion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,12 @@ namespace Domain
     {
         [Key]
         public int AnioAcademicoId { get; set; }
+
+
+        public String Descripcion { get; set; }
+        [Required]
+        public String Anio { get; set; }
+
         public bool Activo { get; set; }
         [Required]
         [DataType(DataType.Date)]
