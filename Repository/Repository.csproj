@@ -85,12 +85,14 @@
     <Compile Include="IEntregaDocumentosRepository.cs" />
     <Compile Include="IEspecialidadRepository.cs" />
     <Compile Include="IGradoRepository.cs" />
+    <Compile Include="IMatriculaRepository.cs" />
     <Compile Include="INivelRepository.cs" />
     <Compile Include="IPaisRepository.cs" />
     <Compile Include="IParentescoRepository.cs" />
     <Compile Include="ISeccionRepository.cs" />
     <Compile Include="IUbigeoRepository.cs" />
     <Compile Include="MasterRepository.cs" />
+    <Compile Include="MatriculaRepository.cs" />
     <Compile Include="Migrations\201708101430260_pais-ubigeo.cs" />
     <Compile Include="Migrations\201708101430260_pais-ubigeo.Designer.cs">
       <DependentUpon>201708101430260_pais-ubigeo.cs</DependentUpon>

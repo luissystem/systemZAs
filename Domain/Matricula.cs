@@ -17,6 +17,7 @@ namespace Domain
         public virtual  Apoderado Apoderado { get; set; }
         public int AnioAcademicoId { get; set; }
         public virtual AnioAcademico AnioAcademico { get; set; }
+        
         public int SeccionId { get; set; }
         public virtual  Seccion Seccion { get; set; }
         public int ParentescoId { get; set; }
