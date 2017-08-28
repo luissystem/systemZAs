@@ -373,6 +373,7 @@
     <Content Include="Views\AnioAcademico\Edit.cshtml" />
     <Content Include="Views\AnioAcademico\Delete.cshtml" />
     <Content Include="Views\Matricula\Index.cshtml" />
+    <Content Include="Views\Matricula\listarmatricula.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

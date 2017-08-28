@@ -82,7 +82,36 @@ namespace Mvc5.Controllers
             var lista = _matriculaService.GetMatriculas("").Where(d => d.AnioAcademico.Anio.Equals(fecha));
             return View(lista);
         }
+        public void SelectList(int estado)
+        {
 
+            var grados = new List<SelectListItem>() {
+                new SelectListItem() { Text = "Seleccione", Value = "0" }
+            };
+            var seccion = new List<SelectListItem>() {
+                new SelectListItem() { Text = "Seleccione", Value = "0" }
+            };
+
+            if (estado == 0)
+            {
+                ViewBag.grados = new SelectList(grados, "Value", "Text");
+                ViewBag.niveles = new SelectList(_nivelService.GetNiveles(), "Id", "NombreNivel");
+                ViewBag.seccion = new SelectList(seccion, "Value", "Text");
+                ViewBag.documento = _documentoService.GetDocumentos();
+            }
+            else
+            {
+                var se = _seccionService.GetSeccion("").Where(s => s.SeccionId.Equals(estado));
+                var gd = _gradoService.GetGrados().Where(g => g.GradoId.Equals(se.First().GradoId));
+                var ni = _nivelService.GetNiveles().Where(n => n.NivelId.Equals(gd.First().NivelId));
+                var alumno = _alumnoService.GetAlumnos("").Where(a => a.AlumnoId.Equals(estado));
+
+                ViewBag.grados = new SelectList(gd, "Id", "NombreGrado");
+                ViewBag.niveles = new SelectList(ni, "Id", "NombreNivel");
+                ViewBag.seccion = new SelectList(se, "Id", "NombreSeccion");
+                ViewBag.documento = _documentoService.GetDocumentos();
+            }
+        }
         // GET: Matricula/Details/5
         public ActionResult Details(int id)
         {
